@@ -19,7 +19,7 @@ This repository is the host of my coding blog. I'd like to share my experience i
 ```git clone https://github.com/COMINGSOON```
 
 ### Initial Layout Design
-![Alt_text](../code-blog-app/public/layout.png "Layout Design")
+![layout](https://user-images.githubusercontent.com/85002387/214331947-d0947ed5-a512-4186-b452-a606aaed5a6b.png)
 
 ### Executing Program
 
