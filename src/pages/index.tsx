@@ -9,7 +9,7 @@ import { HiChevronDown } from 'react-icons/hi'
 
 const HomePage = () => {
   return (
-    <div className='flex flex-col w-full h-screen'>
+    <div className='flex flex-col w-full h-full'>
       <header className='flex h-20 w-full flex-row justify-around items-center bg-white border-b-[1px] border-gray-300'>
         <div>
           <IoReorderThreeOutline className='text-2xl text-gray-600' />
@@ -126,7 +126,60 @@ const HomePage = () => {
             }
           </div>
         </main>
-        <aside className='col-span-4 h-full w-full'>this is used for sidebar</aside>
+        {/* TODO: MAKE SIDEBAR STICKY */}
+        <aside className='sticky top-20 col-span-4 h-full w-full p-6 flex flex-col space-y-4'>
+            <div>
+              <h3 className='my-6 font-semibold text-lg'>People you might be interested in:</h3>
+              <div className='flex flex-col space-y-4'>
+                {
+                  Array.from({length:4}).map((_,i) => (
+                    <div key={i} className='flex flex-row space-x-5 items-center'>
+                      <div className='bg-gray-500 w-10 h-10 rounded-full flex-none'></div>
+                      <div>
+                        <div className='text-sm text-gray-900 font-bold'>
+                          Stephanie Adams
+                        </div>
+                        <div className='text-xs'>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, maxime doloribus! Magni quaerat ullam et, est dolorum doloremque!
+                        </div>
+                      </div>
+                      <div>
+                        <button className='flex items-center space-x-3 rounded border border-gray-400/50 px-4 py-2 transition hover:border-gray-900 hover:text-gray-900'>
+                          Follow
+                        </button>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+            <div>
+            <h3 className='my-6 font-semibold text-lg'>Your reading list:</h3>
+              <div className='flex flex-col space-y-4'>
+                {
+                  Array.from({length:4}).map((_,i) => (
+                    <div key={i} className='flex space-x-6 items-center group'>
+                      <div className='aspect-square h-full w-2/5 rounded-xl bg-gray-300'></div>
+                      <div className='flex w-3/5 flex-col space-y-2'>
+                        <div className='text-lg font-semibold group-hover:underline decoration-cyan-600'>
+                          Lorem ispum dolor sit amet consecetuer
+                        </div>
+                        <div>
+                          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                          Nihil, quidem. Repudiandae illo quasi culpa aliquid mollitia.
+                        </div>
+                        <div className='flex space-x-1 items-center w-full'>
+                          <div className='w-8 h-8 rounded-full bg-gray-300'></div>
+                          <div>Jordan Adams &#x2023;</div>
+                          <div>Jan 24, 2023</div>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+        </aside>
       </section>
     </div>
   )
